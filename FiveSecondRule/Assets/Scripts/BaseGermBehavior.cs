@@ -10,7 +10,7 @@ public abstract class BaseGermBehavior : MonoBehaviour
         Evolve();
     }
 
-    public void Evolve()
+    public virtual void Evolve()
     {
         Debug.Log("Evolved");
     }

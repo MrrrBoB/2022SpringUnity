@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class BacteriaBehavior : BaseGermBehavior
 {
-    void Start()
-    {
-        Evolve();
-    }
+   
 
-    public new void Evolve()
+    public override void Evolve()
     {
         Debug.Log("Hardened");
     }
