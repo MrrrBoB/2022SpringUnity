@@ -2,34 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class SpriteChange : MonoBehaviour
 {
     public int ArraySize;
     public Sprite[] SpriteStages;
-    public int CurrentHitPoints;
+    public int currentShellHitPoints;
     public SpriteRenderer sDisplay;
+    public Collider2D thisCol;
+    public UnityEvent OnShellBreak;
+    public bool hasShell = true;
     void Start()
     {
         ArraySize = SpriteStages.Length;
-        CurrentHitPoints = ArraySize;
+        currentShellHitPoints = ArraySize-1;
     }
-    public void TapEvent()
+    public void OnMouseDown()
     {
-        CurrentHitPoints -= 1;
-        if (CurrentHitPoints <= 0)
+        if (!hasShell) return;
+        if (currentShellHitPoints <= 0)
         {
-            Destroy(this.GameObject());
+            OnShellBreak.Invoke();
+            hasShell = false;
         }
         else
         {
+            currentShellHitPoints -= 1;
             UpdateSprite();
         }
+
     }
     // Update is called once per frame
      private void UpdateSprite()
     {
-        sDisplay.sprite = SpriteStages[CurrentHitPoints-1];
+        sDisplay.sprite = SpriteStages[currentShellHitPoints];
     }
 
      public void TestDebug()

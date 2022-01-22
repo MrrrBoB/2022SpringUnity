@@ -5,6 +5,7 @@ using UnityEngine;
 
 public abstract class BaseGermBehavior : MonoBehaviour
 {
+    public float speed;
     void Start()
     {
         Evolve();
@@ -18,6 +19,11 @@ public abstract class BaseGermBehavior : MonoBehaviour
     public void AdvanceForward()
     {
         Debug.Log("Moved");
+    }
+
+    public virtual void moveForward()
+    {
+        
     }
 
 

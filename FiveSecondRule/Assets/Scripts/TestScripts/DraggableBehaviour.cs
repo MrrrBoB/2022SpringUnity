@@ -15,16 +15,16 @@ public class DraggableBehaviour : MonoBehaviour
         public Rigidbody2D body;
         private bool CanDrag { get; set; }
         public UnityEvent onDrag, onUp;
-        public bool Draggable { get; set; }
+        public bool draggable;
 
         private void Start()
         {
             cam = Camera.main;
-            Draggable = true;
         }
 
         public IEnumerator OnMouseDown()
         {
+            if (!draggable) yield break;
             onDrag.Invoke();
             startTime = Time.time;
             startPosition = transform.position;
@@ -32,20 +32,21 @@ public class DraggableBehaviour : MonoBehaviour
             EnableGravity(false);
             yield return new WaitForFixedUpdate();
             CanDrag = true;
-            
+
             while (CanDrag)
             {
                 yield return new WaitForFixedUpdate();
                 newPosition = cam.ScreenToWorldPoint(Input.mousePosition) + offsetPosition;
                 transform.position = newPosition;
             }
+
         }
 
         private void OnMouseUp()
         {
             CanDrag = false;
             endTime = Time.time;
-            if (Draggable)
+            if (draggable)
             {
                 onUp.Invoke();
             }
@@ -57,6 +58,11 @@ public class DraggableBehaviour : MonoBehaviour
         private void EnableGravity(bool active)
         {
             body.gravityScale = active ? 3 : 0;
+        }
+
+        public void setDraggability(bool b)
+        {
+            draggable = b;
         }
        
     }
