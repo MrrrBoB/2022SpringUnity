@@ -11,7 +11,6 @@ public class SpriteChange : MonoBehaviour
     public Sprite[] SpriteStages;
     public int currentShellHitPoints;
     public SpriteRenderer sDisplay;
-    public Collider2D thisCol;
     public UnityEvent OnShellBreak;
     public bool hasShell = true;
     void Start()
@@ -29,7 +28,7 @@ public class SpriteChange : MonoBehaviour
         }
         else
         {
-            currentShellHitPoints -= 1;
+            CrackShell();
             UpdateSprite();
         }
 
@@ -43,5 +42,10 @@ public class SpriteChange : MonoBehaviour
      public void TestDebug()
      {
          Debug.Log("ChangeSprite");
+     }
+
+     private void CrackShell()
+     {
+         currentShellHitPoints -= 1;
      }
 }

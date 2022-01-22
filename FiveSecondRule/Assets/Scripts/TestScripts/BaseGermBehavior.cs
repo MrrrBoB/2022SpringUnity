@@ -8,7 +8,7 @@ public abstract class BaseGermBehavior : MonoBehaviour
     public float speed;
     void Start()
     {
-        Evolve();
+        
     }
 
     public virtual void Evolve()
