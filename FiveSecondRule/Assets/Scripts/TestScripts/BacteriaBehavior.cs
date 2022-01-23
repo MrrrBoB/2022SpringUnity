@@ -1,14 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BacteriaBehavior : BaseGermBehavior
+namespace TestScripts
 {
+    public class BacteriaBehavior : BaseGermBehavior
+    {
+        private Vector2 direction;
+        public float moveForce;
+        protected override void Start()
+        {
+            base.Start();
+        }
    
 
-    public override void Evolve()
-    {
-        Debug.Log("Hardened");
-    }
+        public override void Evolve()
+        {
+            Debug.Log("Hardened");
+        }
+
+        protected override void MoveForward()
+        {
+            direction = (destination.x - transform.position.x > 0) ? Vector2.right : Vector2.left;
+            body.AddForce(direction*moveForce);
+            Debug.Log("moved"+direction);
+        }
     
+    }
 }

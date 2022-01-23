@@ -647,12 +647,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1112824785}
   - component: {fileID: 1112824784}
+  - component: {fileID: 1112824789}
   - component: {fileID: 1112824783}
   - component: {fileID: 1112824782}
   - component: {fileID: 1112824786}
   - component: {fileID: 1112824787}
   - component: {fileID: 1112824788}
-  - component: {fileID: 1112824789}
   m_Layer: 0
   m_Name: BacteriaTest
   m_TagString: Untagged
@@ -887,7 +887,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd235f1f40a1fa45aa78ed8d8ed63bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  moveFrequency: 2
+  target: {fileID: 744415032}
+  body: {fileID: 1112824788}
+  moveForce: 250
 --- !u!1 &1630285717
 GameObject:
   m_ObjectHideFlags: 0

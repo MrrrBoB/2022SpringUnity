@@ -5,10 +5,18 @@ using UnityEngine;
 
 public abstract class BaseGermBehavior : MonoBehaviour
 {
-    public float speed;
-    void Start()
+    
+    public float moveFrequency;
+    public GameObject target;
+    protected Vector2 destination;
+    private WaitForSeconds wfs;
+    public Rigidbody2D body;
+    protected virtual void Start()
     {
-        
+        destination = target.transform.position;
+        wfs = new WaitForSeconds(moveFrequency);
+        StartCoroutine(MoveTowardsTarget());
+
     }
 
     public virtual void Evolve()
@@ -16,15 +24,21 @@ public abstract class BaseGermBehavior : MonoBehaviour
         Debug.Log("Evolved");
     }
 
-    public void AdvanceForward()
+
+    protected virtual void MoveForward()
     {
-        Debug.Log("Moved");
+        Debug.Log("BaseMove");
     }
 
-    public virtual void moveForward()
+    private IEnumerator MoveTowardsTarget()
     {
-        
+        yield return wfs;
+        Debug.Log("StartedMoving");
+        while (true)
+        {
+            yield return wfs;
+            MoveForward();
+            Debug.Log("Moved");
+        }
     }
-
-
 }

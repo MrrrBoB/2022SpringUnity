@@ -51,6 +51,7 @@ public class DraggableBehaviour : MonoBehaviour
                 onUp.Invoke();
             }
             EnableGravity(true);
+            body.velocity = Vector2.zero;
             if(endTime-startTime<=launchParameterTime)
                 body.AddForce((newPosition-startPosition)/(endTime-startTime)*launchForce);
         }
