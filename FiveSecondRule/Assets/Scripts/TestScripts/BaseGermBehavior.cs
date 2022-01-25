@@ -11,6 +11,7 @@ public abstract class BaseGermBehavior : MonoBehaviour
     protected Vector2 destination;
     private WaitForSeconds wfs;
     public Rigidbody2D body;
+    public Collider2D bodyCol;
     protected virtual void Start()
     {
         destination = target.transform.position;

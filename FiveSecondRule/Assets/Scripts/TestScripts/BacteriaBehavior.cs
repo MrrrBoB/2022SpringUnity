@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace TestScripts
@@ -9,6 +10,7 @@ namespace TestScripts
         protected override void Start()
         {
             base.Start();
+            Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer, true);
         }
    
 
@@ -23,6 +25,5 @@ namespace TestScripts
             body.AddForce(direction*moveForce);
             Debug.Log("moved"+direction);
         }
-    
     }
 }
