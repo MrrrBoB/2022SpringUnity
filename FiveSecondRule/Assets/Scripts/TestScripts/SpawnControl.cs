@@ -6,17 +6,25 @@ using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-public class SpawnAtPoint : MonoBehaviour
+public class SpawnControl : MonoBehaviour
 {
     public Vector2[] spawnPoints;
     public List<GameObject> listOfObjects;
     public float spawnFrequency;
     private WaitForSeconds wfs;
+    [Header("Viruses")]
+    public int virusCount;
+    public GameObject virusObj;
+    [Header("Bacteria")]
+    public int bacteriaCount;
+    public GameObject bacteriaObj;
 
     private void Start()
     {
         wfs = new WaitForSeconds(spawnFrequency);
         StartCoroutine(SpawnRoutine());
+        AddToList(virusCount,virusObj);
+        AddToList(bacteriaCount, bacteriaObj);
     }
 
     // Start is called before the first frame update
@@ -51,6 +59,15 @@ public class SpawnAtPoint : MonoBehaviour
             SpawnAtRandomPoint(listOfObjects[i]);
             listOfObjects.RemoveAt(i);
             yield return wfs;
+        }
+    }
+
+    private void AddToList(int numToAdd, GameObject obj)
+    {
+        if (numToAdd <= 0) return;
+        for (int i = 0; i < numToAdd; i++)
+        {
+            listOfObjects.Add(obj);
         }
     }
 }

@@ -16,10 +16,12 @@ public class DraggableBehaviour : MonoBehaviour
         private bool CanDrag { get; set; }
         public UnityEvent onDrag, onUp;
         public bool draggable;
+        private float gravScale;
 
         private void Start()
         {
             cam = Camera.main;
+            gravScale = body.gravityScale;
         }
 
         public IEnumerator OnMouseDown()
@@ -58,7 +60,7 @@ public class DraggableBehaviour : MonoBehaviour
 
         private void EnableGravity(bool active)
         {
-            body.gravityScale = active ? 3 : 0;
+            body.gravityScale = active ? gravScale : 0;
         }
 
         public void setDraggability(bool b)

@@ -2,7 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public abstract class BaseGermBehavior : MonoBehaviour
 {
     
@@ -10,14 +11,17 @@ public abstract class BaseGermBehavior : MonoBehaviour
     public GameObject target;
     protected Vector2 destination;
     private WaitForSeconds wfs;
-    public Rigidbody2D body;
-    public Collider2D bodyCol;
+    protected Rigidbody2D body;
+    protected Vector2 direction;
+    public float moveForce;
+    //public Collider2D bodyCol;
     protected virtual void Start()
     {
         destination = target.transform.position;
         wfs = new WaitForSeconds(moveFrequency);
+        body = gameObject.GetComponent<Rigidbody2D>();
+        Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer, true);
         StartCoroutine(MoveTowardsTarget());
-
     }
 
     public virtual void Evolve()
@@ -31,10 +35,8 @@ public abstract class BaseGermBehavior : MonoBehaviour
         Debug.Log("BaseMove");
     }
 
-    private IEnumerator MoveTowardsTarget()
+    protected IEnumerator MoveTowardsTarget()
     {
-        yield return wfs;
-        Debug.Log("StartedMoving");
         while (true)
         {
             yield return wfs;

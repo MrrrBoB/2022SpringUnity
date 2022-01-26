@@ -495,16 +495,12 @@ MonoBehaviour:
   spawnPoints:
   - {x: -13, y: 0.4}
   - {x: 13, y: 0.4}
-  listOfObjects:
-  - {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
-  - {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
-  - {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
-  - {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
-  - {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
-  - {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
-  - {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
-  - {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
+  listOfObjects: []
   spawnFrequency: 2
+  virusCount: 4
+  virusObj: {fileID: 5108805428889310070, guid: 609fc7aaf68382744a57e299a963ab03, type: 3}
+  bacteriaCount: 3
+  bacteriaObj: {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
 --- !u!4 &1188822503
 Transform:
   m_ObjectHideFlags: 0
@@ -881,3 +877,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
+--- !u!1001 &7320326734239874508
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 997394134828294177, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 997394134828294177, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 997394134828294177, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 997394134828294177, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.181188
+      objectReference: {fileID: 0}
+    - target: {fileID: 997394134828294177, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 997394134828294177, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 997394134828294177, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 997394134828294177, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 997394134828294177, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 997394134828294177, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 997394134828294177, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364431186232020727, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
+      propertyPath: m_Name
+      value: VirusFloatTarget
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}

@@ -5,12 +5,10 @@ namespace TestScripts
 {
     public class BacteriaBehavior : BaseGermBehavior
     {
-        private Vector2 direction;
-        public float moveForce;
+        
         protected override void Start()
         {
             base.Start();
-            Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer, true);
         }
    
 
