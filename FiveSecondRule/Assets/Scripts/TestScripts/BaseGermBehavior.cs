@@ -39,9 +39,9 @@ public abstract class BaseGermBehavior : MonoBehaviour
     {
         while (true)
         {
-            yield return wfs;
             MoveForward();
             Debug.Log("Moved");
+            yield return wfs;
         }
     }
 }

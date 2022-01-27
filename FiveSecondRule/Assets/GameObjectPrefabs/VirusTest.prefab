@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3022957955809750758}
   - component: {fileID: 7546556795713739543}
   - component: {fileID: 4292129066430779308}
+  - component: {fileID: -6838300297832986541}
   m_Layer: 6
   m_Name: VirusTest
   m_TagString: Untagged
@@ -158,6 +159,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bbe019010fe9642a8a183cf3d2e13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveFrequency: 2
+  moveFrequency: 0.5
   target: {fileID: 2364431186232020727, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
-  moveForce: 2
+  moveForce: 20
+--- !u!114 &-6838300297832986541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5108805428889310070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4fa7a63a1e4a94ebf500633d49e420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: c2dc572e89ddbe542830591cb0149074, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  collisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: ca9af0d8772864a4badf13017946ba6a, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  disableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  quitEvent:
+    m_PersistentCalls:
+      m_Calls: []

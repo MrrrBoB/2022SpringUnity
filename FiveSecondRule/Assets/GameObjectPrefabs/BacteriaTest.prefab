@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6580374562516774739}
   - component: {fileID: 6580374562516774738}
   - component: {fileID: 6580374562516774741}
+  - component: {fileID: -8648018361855426462}
+  - component: {fileID: -4248772115385700956}
   m_Layer: 6
   m_Name: BacteriaTest
   m_TagString: Untagged
@@ -101,9 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveFrequency: 1
-  target: {fileID: 3720509219130965443, guid: 23c49a5800ec15f4d9076941e911ec1a, type: 3}
-  body: {fileID: 6580374562516774741}
-  bodyCol: {fileID: 6580374562516774738}
+  target: {fileID: 6901796659209021454, guid: 57f7daa1964596848af182c05df671a9, type: 3}
   moveForce: 350
 --- !u!114 &6580374562516774734
 MonoBehaviour:
@@ -210,3 +210,59 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8648018361855426462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580374562516774732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703d0a8a200977f45a6fc3747d113d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: ca9af0d8772864a4badf13017946ba6a, type: 2}
+  respondEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6580374562516774740}
+        m_TargetAssemblyTypeName: TestScripts.BacteriaBehavior, Assembly-CSharp
+        m_MethodName: ChangeSpeed
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.5
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-4248772115385700956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580374562516774732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703d0a8a200977f45a6fc3747d113d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: c2dc572e89ddbe542830591cb0149074, type: 2}
+  respondEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6580374562516774740}
+        m_TargetAssemblyTypeName: TestScripts.BacteriaBehavior, Assembly-CSharp
+        m_MethodName: ChangeSpeed
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
