@@ -7,13 +7,14 @@ using UnityEngine;
 public abstract class BaseGermBehavior : MonoBehaviour
 {
     
-    public float moveFrequency;
-    public GameObject target;
-    protected Vector2 destination;
     private WaitForSeconds wfs;
     protected Rigidbody2D body;
-    protected Vector2 direction;
+    protected Vector2 direction, destination;
+    public GameObject target;
+    [Header("Movement")]
     public float moveForce;
+    public float moveFrequency;
+    public float speedMultiplier;
     //public Collider2D bodyCol;
     protected virtual void Start()
     {
@@ -44,4 +45,11 @@ public abstract class BaseGermBehavior : MonoBehaviour
             yield return wfs;
         }
     }
+
+    public void ChangeSpeed(bool increase)
+    {
+        moveFrequency *= increase ? speedMultiplier:(1/speedMultiplier);
+        wfs = new WaitForSeconds(1/moveFrequency);
+    }
+    
 }

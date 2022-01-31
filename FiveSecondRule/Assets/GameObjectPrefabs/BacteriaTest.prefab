@@ -102,9 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd235f1f40a1fa45aa78ed8d8ed63bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveFrequency: 1
   target: {fileID: 6901796659209021454, guid: 57f7daa1964596848af182c05df671a9, type: 3}
-  moveForce: 350
+  moveForce: 250
+  moveFrequency: 1
+  speedMultiplier: 1.4
 --- !u!114 &6580374562516774734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,9 +228,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6580374562516774740}
-        m_TargetAssemblyTypeName: TestScripts.BacteriaBehavior, Assembly-CSharp
+        m_TargetAssemblyTypeName: BaseGermBehavior, Assembly-CSharp
         m_MethodName: ChangeSpeed
-        m_Mode: 4
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -255,14 +256,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6580374562516774740}
-        m_TargetAssemblyTypeName: TestScripts.BacteriaBehavior, Assembly-CSharp
+        m_TargetAssemblyTypeName: BaseGermBehavior, Assembly-CSharp
         m_MethodName: ChangeSpeed
-        m_Mode: 4
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 2
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
