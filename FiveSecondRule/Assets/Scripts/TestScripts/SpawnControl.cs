@@ -18,6 +18,9 @@ public class SpawnControl : MonoBehaviour
     [Header("Bacteria")]
     public int bacteriaCount;
     public GameObject bacteriaObj;
+    [Header("Spores")] 
+    public int sporeCount;
+    public GameObject SporeObj;
 
     private void Start()
     {
@@ -25,6 +28,7 @@ public class SpawnControl : MonoBehaviour
         StartCoroutine(SpawnRoutine());
         AddToList(virusCount,virusObj);
         AddToList(bacteriaCount, bacteriaObj);
+        AddToList(sporeCount,SporeObj);
     }
 
     // Start is called before the first frame update

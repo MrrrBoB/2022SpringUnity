@@ -361,7 +361,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166440004}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -477,7 +477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170769177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.15, y: 2.849, z: 0}
+  m_LocalPosition: {x: -15.15, y: 5.17, z: 0}
   m_LocalScale: {x: 1, y: 1.55, z: 1}
   m_Children: []
   m_Father: {fileID: 1804757786}
@@ -1787,6 +1787,8 @@ MonoBehaviour:
   virusObj: {fileID: 5108805428889310070, guid: 609fc7aaf68382744a57e299a963ab03, type: 3}
   bacteriaCount: 3
   bacteriaObj: {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
+  sporeCount: 2
+  SporeObj: {fileID: 4127098547708445205, guid: 490971ff96836b84bafeae501757b99b, type: 3}
 --- !u!4 &1188822503
 Transform:
   m_ObjectHideFlags: 0
@@ -2092,7 +2094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630285717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.36, y: 0, z: 0}
+  m_LocalPosition: {x: -24.36, y: 1.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1804757786}
@@ -2196,7 +2198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835901860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.7069, y: 0, z: 0}
+  m_LocalPosition: {x: 6.7069, y: 2, z: 0}
   m_LocalScale: {x: 1.4375, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1804757786}
@@ -2634,6 +2636,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051938372}
   m_CullTransparentMesh: 1
+--- !u!1001 &4127098546995205132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4127098547708445202, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127098547708445202, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127098547708445202, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127098547708445202, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.452494
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127098547708445202, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127098547708445202, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127098547708445202, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127098547708445202, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127098547708445202, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127098547708445202, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127098547708445202, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127098547708445205, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+      propertyPath: m_Name
+      value: SporePrefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 490971ff96836b84bafeae501757b99b, type: 3}
 --- !u!1001 &6580374561403991169
 PrefabInstance:
   m_ObjectHideFlags: 0
