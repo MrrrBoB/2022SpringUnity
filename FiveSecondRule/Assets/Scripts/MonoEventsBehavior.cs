@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public class MonoEventsBehavior : MonoBehaviour
 {
-    public UnityEvent startEvent, collisionEvent, triggerEnterEvent, destroyEvent, disableEvent, quitEvent;
+    public UnityEvent startEvent, collisionEvent, triggerEnterEvent, destroyEvent, disableEvent, quitEvent, tapEvent;
    
     void Start()
     {
@@ -41,5 +41,10 @@ public class MonoEventsBehavior : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         triggerEnterEvent.Invoke();
+    }
+
+    public void OnMouseDown()
+    {
+        tapEvent.Invoke();
     }
 }
