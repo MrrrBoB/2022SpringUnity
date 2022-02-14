@@ -43,6 +43,11 @@ public class MonoEventsBehavior : MonoBehaviour
         triggerEnterEvent.Invoke();
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        collisionEvent.Invoke();
+    }
+
     public void OnMouseDown()
     {
         tapEvent.Invoke();

@@ -10,7 +10,8 @@ public class DraggableBehaviour : MonoBehaviour
         private Vector3 newPosition;
         private Vector3 startPosition;
         private Camera cam;
-        public float launchForce, launchParameterTime;
+        private float launchForce = 50f; 
+        private float launchParameterTime= 0.5f;
         private float startTime, endTime;
         public Rigidbody2D body;
         private bool CanDrag { get; set; }
