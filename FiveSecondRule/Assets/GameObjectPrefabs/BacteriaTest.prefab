@@ -154,8 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8ecf5cfbf2d4be9b71a349301f8009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchForce: 50
-  launchParameterTime: 0.5
   body: {fileID: 6580374562516774741}
   onDrag:
     m_PersistentCalls:
