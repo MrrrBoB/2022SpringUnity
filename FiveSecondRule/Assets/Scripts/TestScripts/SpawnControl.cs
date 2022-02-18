@@ -21,14 +21,15 @@ public class SpawnControl : MonoBehaviour
     [Header("Spores")] 
     public int sporeCount;
     public GameObject SporeObj;
+    [Header("GermCounterData")] 
+    public GermCountData countObj;
 
     private void Start()
     {
         wfs = new WaitForSeconds(spawnFrequency);
         StartCoroutine(SpawnRoutine());
-        AddToList(virusCount,virusObj);
-        AddToList(bacteriaCount, bacteriaObj);
-        AddToList(sporeCount,SporeObj);
+        FillList();
+        countObj.SetGermCountData(listOfObjects.Count);
     }
 
     // Start is called before the first frame update
@@ -73,5 +74,22 @@ public class SpawnControl : MonoBehaviour
         {
             listOfObjects.Add(obj);
         }
+    }
+
+    public void FillList()
+    {
+        AddToList(virusCount,virusObj);
+        AddToList(bacteriaCount, bacteriaObj);
+        AddToList(sporeCount,SporeObj);
+    }
+
+    public void ResetSpawner()
+    {
+        Start();
+       /* listOfObjects.Clear();
+        FillList();
+        StartCoroutine(SpawnRoutine());
+        countObj.SetGermCountData(listOfObjects.Count);
+        */
     }
 }
