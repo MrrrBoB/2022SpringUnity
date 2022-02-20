@@ -12,6 +12,7 @@ public class SpawnControl : MonoBehaviour
     public List<GameObject> listOfObjects;
     public float spawnFrequency;
     private WaitForSeconds wfs;
+    private Coroutine currentRoutine;
     [Header("Viruses")]
     public int virusCount;
     public GameObject virusObj;
@@ -27,7 +28,7 @@ public class SpawnControl : MonoBehaviour
     private void Start()
     {
         wfs = new WaitForSeconds(spawnFrequency);
-        StartCoroutine(SpawnRoutine());
+        currentRoutine =StartCoroutine(SpawnRoutine());
         FillList();
         countObj.SetGermCountData(listOfObjects.Count);
     }
@@ -85,6 +86,8 @@ public class SpawnControl : MonoBehaviour
 
     public void ResetSpawner()
     {
+        StopCoroutine(currentRoutine);
+        listOfObjects.Clear();
         Start();
        /* listOfObjects.Clear();
         FillList();
