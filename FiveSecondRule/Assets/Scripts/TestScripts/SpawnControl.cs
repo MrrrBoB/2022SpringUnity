@@ -9,10 +9,11 @@ using Random = UnityEngine.Random;
 public class SpawnControl : MonoBehaviour
 {
     public Vector2[] spawnPoints;
-    public List<GameObject> listOfObjects;
+    public List<GameObject> listOfObjects, dogList;
     public float spawnFrequency;
-    private WaitForSeconds wfs;
-    private Coroutine currentRoutine;
+    private WaitForSeconds wfs, dogWfs;
+    private Coroutine currentRoutine, currentDogRoutine;
+    public bool dogsEnabled;
     [Header("Viruses")]
     public int virusCount;
     public GameObject virusObj;
@@ -28,12 +29,22 @@ public class SpawnControl : MonoBehaviour
     private void Start()
     {
         wfs = new WaitForSeconds(spawnFrequency);
+        dogWfs = new WaitForSeconds(spawnFrequency * 5);
+        currentDogRoutine = null;
+        Initiate();
+    }
+
+    private void Initiate()
+    {
+        if (dogsEnabled)
+        {
+            currentDogRoutine = StartCoroutine(DogRoutine());
+        }
         currentRoutine =StartCoroutine(SpawnRoutine());
         FillList();
         countObj.SetGermCountData(listOfObjects.Count);
     }
-
-    // Start is called before the first frame update
+    
     public void SpawnAtRandomPoint(GameObject obj)
     {
         SpawnThing(spawnPoints[Random.Range(0,spawnPoints.Length)], obj);
@@ -68,6 +79,12 @@ public class SpawnControl : MonoBehaviour
         }
     }
 
+    public IEnumerator DogRoutine()
+    {
+        Debug.Log("Dogs!");
+        yield break;
+    }
+
     private void AddToList(int numToAdd, GameObject obj)
     {
         if (numToAdd <= 0) return;
@@ -87,12 +104,8 @@ public class SpawnControl : MonoBehaviour
     public void ResetSpawner()
     {
         StopCoroutine(currentRoutine);
+        if(dogsEnabled) StopCoroutine(DogRoutine());
         listOfObjects.Clear();
-        Start();
-       /* listOfObjects.Clear();
-        FillList();
-        StartCoroutine(SpawnRoutine());
-        countObj.SetGermCountData(listOfObjects.Count);
-        */
+        Initiate();
     }
 }

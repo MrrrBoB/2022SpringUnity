@@ -2028,7 +2028,9 @@ MonoBehaviour:
   - {x: -13, y: 0.4}
   - {x: 13, y: 0.4}
   listOfObjects: []
+  dogList: []
   spawnFrequency: 2
+  dogsEnabled: 1
   virusCount: 1
   virusObj: {fileID: 5108805428889310070, guid: 609fc7aaf68382744a57e299a963ab03, type: 3}
   bacteriaCount: 3
@@ -2818,6 +2820,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dog_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4149192737309634407, guid: 219052247b78cc14c8ded5b719858566, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149192737309634407, guid: 219052247b78cc14c8ded5b719858566, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 219052247b78cc14c8ded5b719858566, type: 3}
 --- !u!1 &1990082367
@@ -3165,6 +3175,14 @@ PrefabInstance:
     - target: {fileID: 4149192737309634407, guid: 219052247b78cc14c8ded5b719858566, type: 3}
       propertyPath: m_Name
       value: Dog_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149192737309634407, guid: 219052247b78cc14c8ded5b719858566, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149192737309634407, guid: 219052247b78cc14c8ded5b719858566, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 219052247b78cc14c8ded5b719858566, type: 3}
