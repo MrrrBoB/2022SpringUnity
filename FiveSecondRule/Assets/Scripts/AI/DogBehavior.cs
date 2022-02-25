@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class DogBehavior : MonoBehaviour
@@ -11,6 +12,7 @@ public class DogBehavior : MonoBehaviour
     private Vector3 launchDirection;
     public float tapLaunchStrength;
     private Vector2 resetLocation;
+    public UnityEvent signalSpawner;
 
     private void Start()
     {
@@ -30,6 +32,11 @@ public class DogBehavior : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other)
+    {
+       resetDog();
+    }
+
+    public void resetDog()
     {
         gameObject.transform.position = resetLocation;
         gameObject.SetActive(false);

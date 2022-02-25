@@ -9,11 +9,10 @@ using Random = UnityEngine.Random;
 public class SpawnControl : MonoBehaviour
 {
     public Vector2[] spawnPoints;
-    public List<GameObject> listOfObjects, dogList;
+    public List<GameObject> listOfObjects;
     public float spawnFrequency;
-    private WaitForSeconds wfs, dogWfs;
-    private Coroutine currentRoutine, currentDogRoutine;
-    public bool dogsEnabled;
+    private WaitForSeconds wfs;
+    private Coroutine currentRoutine;
     [Header("Viruses")]
     public int virusCount;
     public GameObject virusObj;
@@ -29,17 +28,11 @@ public class SpawnControl : MonoBehaviour
     private void Start()
     {
         wfs = new WaitForSeconds(spawnFrequency);
-        dogWfs = new WaitForSeconds(spawnFrequency * 5);
-        currentDogRoutine = null;
         Initiate();
     }
 
     private void Initiate()
     {
-        if (dogsEnabled)
-        {
-            currentDogRoutine = StartCoroutine(DogRoutine());
-        }
         currentRoutine =StartCoroutine(SpawnRoutine());
         FillList();
         countObj.SetGermCountData(listOfObjects.Count);
@@ -79,11 +72,7 @@ public class SpawnControl : MonoBehaviour
         }
     }
 
-    public IEnumerator DogRoutine()
-    {
-        Debug.Log("Dogs!");
-        yield break;
-    }
+    
 
     private void AddToList(int numToAdd, GameObject obj)
     {
@@ -104,8 +93,10 @@ public class SpawnControl : MonoBehaviour
     public void ResetSpawner()
     {
         StopCoroutine(currentRoutine);
-        if(dogsEnabled) StopCoroutine(DogRoutine());
         listOfObjects.Clear();
         Initiate();
     }
+
+    
+    
 }
