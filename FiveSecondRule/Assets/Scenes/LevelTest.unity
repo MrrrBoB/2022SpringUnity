@@ -2710,6 +2710,7 @@ GameObject:
   - component: {fileID: 1188822503}
   - component: {fileID: 1188822502}
   - component: {fileID: 1188822504}
+  - component: {fileID: 1188822505}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -2734,13 +2735,14 @@ MonoBehaviour:
   - {x: 13, y: 0.4}
   listOfObjects: []
   spawnFrequency: 2
-  virusCount: 1
+  levelTotalCount: 0
+  remainingText: {fileID: 1832880478}
+  virusCount: 2
   virusObj: {fileID: 5108805428889310070, guid: 609fc7aaf68382744a57e299a963ab03, type: 3}
-  bacteriaCount: 3
+  bacteriaCount: 5
   bacteriaObj: {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
   sporeCount: 2
   SporeObj: {fileID: 4127098547708445205, guid: 490971ff96836b84bafeae501757b99b, type: 3}
-  countObj: {fileID: 11400000, guid: 7084d5c45397d414fab34670692162d5, type: 2}
 --- !u!4 &1188822503
 Transform:
   m_ObjectHideFlags: 0
@@ -2779,6 +2781,34 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1188822505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188822501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703d0a8a200977f45a6fc3747d113d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: 39fedd4fceb14be4dae03a7741624ef2, type: 2}
+  respondEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1188822502}
+        m_TargetAssemblyTypeName: SpawnControl, Assembly-CSharp
+        m_MethodName: UpdateRemaining
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3427,7 +3457,6 @@ GameObject:
   - component: {fileID: 1832880475}
   - component: {fileID: 1832880479}
   - component: {fileID: 1832880478}
-  - component: {fileID: 1832880477}
   - component: {fileID: 1832880476}
   m_Layer: 5
   m_Name: Text
@@ -3471,7 +3500,7 @@ MonoBehaviour:
   respondEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1832880477}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TextManager, Assembly-CSharp
         m_MethodName: UpdateText
         m_Mode: 1
@@ -3483,20 +3512,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1832880477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832880474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2324cfa1e626f9a479ff23d12939f2a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  referenceObj: {fileID: 11400000, guid: 7084d5c45397d414fab34670692162d5, type: 2}
-  counter: {fileID: 1832880478}
 --- !u!114 &1832880478
 MonoBehaviour:
   m_ObjectHideFlags: 0
