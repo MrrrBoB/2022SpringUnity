@@ -61,6 +61,8 @@ public class SpawnControl : MonoBehaviour
         }
     public IEnumerator SpawnRoutine()
     {
+        yield return new WaitForSeconds(.01f);
+        UpdateDisplayText("GET READY!");
         yield return wfs;
         germsRemaining = levelTotalCount;
         UpdateDisplayText();
@@ -93,7 +95,12 @@ public class SpawnControl : MonoBehaviour
     private void UpdateDisplayText()
     {
         if (remainingText != null)
-            remainingText.text = germsRemaining.ToString();
+            remainingText.text = germsRemaining+" Germs Remain";
+    }
+    private void UpdateDisplayText(string msg)
+    {
+        if (remainingText != null)
+            remainingText.text = msg;
     }
 
 
@@ -103,18 +110,18 @@ public class SpawnControl : MonoBehaviour
 
 //Unused methods that might be useful or I might just remove
    
-    public void SpawnAtSetPoint(int i, GameObject obj)
+   /* public void SpawnAtSetPoint(int i, GameObject obj)
     {
         SpawnThing(spawnPoints[i], obj);
-    }
+    }*/
 
-    public void SpawnAtAllPoints(GameObject obj)
+   /*public void SpawnAtAllPoints(GameObject obj)
     {
         foreach (Vector2 spot in spawnPoints)
         {
             SpawnThing(spot, obj);
         }
-    }
+    }*/
     
 
 
