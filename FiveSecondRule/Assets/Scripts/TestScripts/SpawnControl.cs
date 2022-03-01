@@ -9,13 +9,14 @@ using Random = UnityEngine.Random;
 
 public class SpawnControl : MonoBehaviour
 {
+    public GermCountData GermCounter;
     public Vector2[] spawnPoints;
     public List<GameObject> listOfObjects;
     public float spawnFrequency;
-    private int germsRemaining;
     private WaitForSeconds wfs;
     private Coroutine currentRoutine;
     public int levelTotalCount;
+    public UnityEvent winEvent;
     public Text remainingText;
     [Header("Viruses")]
     public int virusCount;
@@ -39,8 +40,8 @@ public class SpawnControl : MonoBehaviour
         currentRoutine =StartCoroutine(SpawnRoutine());
         FillList();
     }
-    
-    public void FillList()
+
+    private void FillList()
     {
         AddToList(virusCount,virusObj);
         AddToList(bacteriaCount, bacteriaObj);
@@ -59,12 +60,13 @@ public class SpawnControl : MonoBehaviour
         {
             Instantiate(thingToSpawn, location, quaternion.identity);
         }
-    public IEnumerator SpawnRoutine()
+
+    private IEnumerator SpawnRoutine()
     {
         yield return new WaitForSeconds(.01f);
         UpdateDisplayText("GET READY!");
         yield return wfs;
-        germsRemaining = levelTotalCount;
+        GermCounter.SetGermCount(levelTotalCount);
         UpdateDisplayText();
         while (listOfObjects.Count>0)
         {
@@ -88,14 +90,14 @@ public class SpawnControl : MonoBehaviour
 
     public void UpdateRemaining(int val)
     {
-        germsRemaining += val;
+        GermCounter.ChangeGermCount(val);
         UpdateDisplayText();
     }
 
     private void UpdateDisplayText()
     {
         if (remainingText != null)
-            remainingText.text = germsRemaining+" Germs Remain";
+            remainingText.text = GermCounter.GetGermCount()+" Germs Remain";
     }
     private void UpdateDisplayText(string msg)
     {

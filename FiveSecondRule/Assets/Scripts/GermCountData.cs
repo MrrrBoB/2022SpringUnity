@@ -7,28 +7,26 @@ using UnityEngine.Events;
 public class GermCountData : ScriptableObject
 {
     public int numGerms;
-    public int holdCount;
-    public UnityEvent numChangeEvent;
-    public void ChangeGermCount(int val)
-    {
-        numGerms += val;
-        numChangeEvent.Invoke();
-    }
-
-    public void InitializeCount(int iVal)
-    {
-        holdCount = iVal;
-        ResetGermCountData();
-    }
-
-    public void ResetGermCountData()
-    {
-        numGerms = holdCount;
-        numChangeEvent.Invoke();
-    }
+    public UnityEvent winEvent;
+    public UnityEvent updateEvent;
 
     public int GetGermCount()
     {
         return numGerms;
     }
+
+    public void ChangeGermCount(int valueChanged)
+    {
+        numGerms += valueChanged;
+        updateEvent?.Invoke();
+        if(numGerms<=0) winEvent?.Invoke();
+    }
+
+    public void SetGermCount(int val)
+    {
+        updateEvent?.Invoke();
+        numGerms = val;
+    }
+    
+    
 }
