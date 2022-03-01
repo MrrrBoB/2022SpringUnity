@@ -3,7 +3,11 @@ guid: 22e7a0cc0f1d22f4c9508a842bc5735e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - virusObj: {fileID: 5108805428889310070, guid: 609fc7aaf68382744a57e299a963ab03, type: 3}
+  - bacteriaObj: {fileID: 6580374562516774732, guid: ed0eae617be962a4c961703fdba63ce7, type: 3}
+  - SporeObj: {fileID: 4127098547708445205, guid: 490971ff96836b84bafeae501757b99b, type: 3}
+  - countObj: {fileID: 11400000, guid: 7084d5c45397d414fab34670692162d5, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

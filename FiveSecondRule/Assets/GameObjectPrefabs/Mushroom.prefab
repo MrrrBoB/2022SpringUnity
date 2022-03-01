@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5399015485043294402}
   - component: {fileID: 5399015485043294405}
   - component: {fileID: 5399015485043294404}
+  - component: {fileID: -6226223594610632200}
+  - component: {fileID: 4019559747961028166}
   m_Layer: 6
   m_Name: Mushroom
   m_TagString: Untagged
@@ -156,6 +158,34 @@ MonoBehaviour:
       m_Calls: []
   tapEvent:
     m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5399015485043294404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5399015485043294407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9073b5a4ccb97945b031123276084b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6226223594610632200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5399015485043294407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703d0a8a200977f45a6fc3747d113d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: 9fc93307762fab947866682cf945b88a, type: 2}
+  respondEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5399015485043294404}
         m_TargetAssemblyTypeName: DestroyObject, Assembly-CSharp
@@ -169,7 +199,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5399015485043294404
+--- !u!114 &4019559747961028166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,6 +208,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5399015485043294407}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9073b5a4ccb97945b031123276084b2, type: 3}
+  m_Script: {fileID: 11500000, guid: b63a9ec2ffbb9734f95074a7ddee096c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 3

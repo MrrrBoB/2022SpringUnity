@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 3022957955809750758}
   - component: {fileID: 7546556795713739543}
   - component: {fileID: 4292129066430779308}
+  - component: {fileID: -2767143470288709159}
   - component: {fileID: -6838300297832986541}
+  - component: {fileID: 3473050304350715416}
   m_Layer: 6
   m_Name: VirusTest
   m_TagString: Untagged
@@ -100,8 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8ecf5cfbf2d4be9b71a349301f8009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchForce: 50
-  launchParameterTime: 0.5
   body: {fileID: 7546556795713739543}
   onDrag:
     m_PersistentCalls:
@@ -159,9 +159,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bbe019010fe9642a8a183cf3d2e13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveFrequency: 0.5
   target: {fileID: 2364431186232020727, guid: 15e23fabbea9c41458b4501107b0b093, type: 3}
   moveForce: 20
+  moveFrequency: 0.5
+  speedMultiplier: 0
+--- !u!114 &-2767143470288709159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5108805428889310070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703d0a8a200977f45a6fc3747d113d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: 9fc93307762fab947866682cf945b88a, type: 2}
+  respondEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3473050304350715416}
+        m_TargetAssemblyTypeName: DestroyObject, Assembly-CSharp
+        m_MethodName: destroyThisObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-6838300297832986541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +227,19 @@ MonoBehaviour:
   destroyEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: ca9af0d8772864a4badf13017946ba6a, type: 2}
+      - m_Target: {fileID: 11400000, guid: 7084d5c45397d414fab34670692162d5, type: 2}
+        m_TargetAssemblyTypeName: GermCountData, Assembly-CSharp
+        m_MethodName: ChangeGermCount
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 39fedd4fceb14be4dae03a7741624ef2, type: 2}
         m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
         m_MethodName: RaiseAction
         m_Mode: 1
@@ -216,3 +257,18 @@ MonoBehaviour:
   quitEvent:
     m_PersistentCalls:
       m_Calls: []
+  tapEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3473050304350715416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5108805428889310070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9073b5a4ccb97945b031123276084b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
