@@ -1,0 +1,5 @@
+Added win and lose conditions
+Refactored code to work with SO.
+Germs only "die" when hitting barrier and not when resetting level. 
+Added Dogs!
+Dogs are independant from germs but still cause a lose condition
