@@ -466,6 +466,7 @@ GameObject:
   - component: {fileID: 170769178}
   - component: {fileID: 170769179}
   - component: {fileID: 170769180}
+  - component: {fileID: 170769181}
   m_Layer: 0
   m_Name: RightBound
   m_TagString: Untagged
@@ -525,6 +526,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b9a0e5a00bd4044be0296142b446cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &170769181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170769177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4fa7a63a1e4a94ebf500633d49e420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 39fedd4fceb14be4dae03a7741624ef2, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  disableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  quitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tapEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &206965640
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,9 +707,9 @@ MonoBehaviour:
   respondEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 206965645}
-        m_TargetAssemblyTypeName: TestUI, Assembly-CSharp
-        m_MethodName: EnableCanvas
+      - m_Target: {fileID: 166440005}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2648,12 +2694,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e7a0cc0f1d22f4c9508a842bc5735e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GermCounter: {fileID: 11400000, guid: 7084d5c45397d414fab34670692162d5, type: 2}
   spawnPoints:
   - {x: -13, y: 0.4}
   - {x: 13, y: 0.4}
   listOfObjects: []
   spawnFrequency: 2
   levelTotalCount: 0
+  winEvent:
+    m_PersistentCalls:
+      m_Calls: []
   remainingText: {fileID: 1832880478}
   virusCount: 2
   virusObj: {fileID: 5108805428889310070, guid: 609fc7aaf68382744a57e299a963ab03, type: 3}
@@ -3296,6 +3346,7 @@ GameObject:
   - component: {fileID: 1630285718}
   - component: {fileID: 1630285719}
   - component: {fileID: 1630285720}
+  - component: {fileID: 1630285721}
   m_Layer: 0
   m_Name: LeftBound
   m_TagString: Untagged
@@ -3355,6 +3406,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b9a0e5a00bd4044be0296142b446cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1630285721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630285717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4fa7a63a1e4a94ebf500633d49e420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 39fedd4fceb14be4dae03a7741624ef2, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  disableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  quitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tapEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1804757785
 GameObject:
   m_ObjectHideFlags: 0
@@ -3583,6 +3679,7 @@ GameObject:
   - component: {fileID: 1835901861}
   - component: {fileID: 1835901862}
   - component: {fileID: 1835901863}
+  - component: {fileID: 1835901864}
   m_Layer: 0
   m_Name: TopBound
   m_TagString: Untagged
@@ -3642,6 +3739,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b9a0e5a00bd4044be0296142b446cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1835901864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835901860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4fa7a63a1e4a94ebf500633d49e420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 39fedd4fceb14be4dae03a7741624ef2, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  destroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  disableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  quitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tapEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1839204016
 GameObject:
   m_ObjectHideFlags: 0

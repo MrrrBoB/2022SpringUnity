@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class TextManager : MonoBehaviour
 {
-    public SpawnControl referenceObj;
+    public GermCountData referenceObj;
     public Text counter;
     // Start is called before the first frame update
     public void UpdateText()
     {
-        counter.text = "fixme";
+        counter.text = referenceObj.GetGermCount().ToString() ;
     }
 
     private void Start()

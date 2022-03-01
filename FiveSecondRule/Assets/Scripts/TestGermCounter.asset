@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1471c31f392914998c57141abdc463, type: 3}
   m_Name: TestGermCounter
   m_EditorClassIdentifier: 
-  numGerms: 0
-  numChangeEvent:
+  numGerms: 9
+  winEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 8625825ce4075814b983cdca9e07d76c, type: 2}
+      - m_Target: {fileID: 11400000, guid: 2c0f11a2a1fd0ed4a9f8ae07b6f6cbab, type: 2}
         m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
         m_MethodName: RaiseAction
         m_Mode: 1
@@ -28,3 +28,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  updateEvent:
+    m_PersistentCalls:
+      m_Calls: []
