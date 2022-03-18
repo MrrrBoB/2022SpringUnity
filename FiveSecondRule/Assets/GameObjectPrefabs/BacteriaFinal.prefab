@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6580374562516774732
+--- !u!1 &3973552537649193633
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6580374562516774736}
-  - component: {fileID: 6580374562516774737}
-  - component: {fileID: 6580374562516774740}
-  - component: {fileID: 6580374562516774734}
-  - component: {fileID: 6580374562516774739}
-  - component: {fileID: 6580374562516774738}
-  - component: {fileID: 6580374562516774741}
-  - component: {fileID: -8648018361855426462}
-  - component: {fileID: -4248772115385700956}
-  - component: {fileID: 1507703351512687559}
-  - component: {fileID: 6191343848392109459}
+  - component: {fileID: 3973552537649193661}
+  - component: {fileID: 3973552537649193660}
+  - component: {fileID: 3973552537649193657}
+  - component: {fileID: 3973552537649193635}
+  - component: {fileID: 3973552537649193662}
+  - component: {fileID: 3973552537649193663}
+  - component: {fileID: 3973552537649193656}
+  - component: {fileID: 7749245975448243599}
+  - component: {fileID: 2990283996348489801}
+  - component: {fileID: 8690464056629194282}
+  - component: {fileID: 4150868993530175614}
+  - component: {fileID: 7815657636294014301}
   m_Layer: 6
-  m_Name: BacteriaTest
+  m_Name: BacteriaFinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6580374562516774736
+--- !u!4 &3973552537649193661
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580374562516774732}
+  m_GameObject: {fileID: 3973552537649193633}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.01, y: 0.55, z: -0.5594391}
+  m_LocalPosition: {x: 9.9, y: -0.65, z: -0.5594391}
   m_LocalScale: {x: 0.50557756, y: 0.50557756, z: 0.50557756}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6580374562516774737
+--- !u!212 &3973552537649193660
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580374562516774732}
+  m_GameObject: {fileID: 3973552537649193633}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 74234f6c122da8847b5479e01dc44bb1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -92,30 +93,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6580374562516774740
+--- !u!114 &3973552537649193657
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580374562516774732}
+  m_GameObject: {fileID: 3973552537649193633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdd235f1f40a1fa45aa78ed8d8ed63bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pSys: {fileID: 0}
+  pSys: {fileID: 3063301636590426127, guid: 4eb4359a0ebb52e46babbaf314ddb128, type: 3}
   target: {fileID: 6901796659209021454, guid: 57f7daa1964596848af182c05df671a9, type: 3}
   moveForce: 250
   moveFrequency: 1
   speedMultiplier: 1.4
---- !u!114 &6580374562516774734
+--- !u!114 &3973552537649193635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580374562516774732}
+  m_GameObject: {fileID: 3973552537649193633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 395bacef94ab6bd4c973cfb7fc9ce29b, type: 3}
@@ -128,11 +129,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fe85d77ab24ca56469d7d63357d69be8, type: 3}
   - {fileID: 21300000, guid: 74234f6c122da8847b5479e01dc44bb1, type: 3}
   currentShellHitPoints: 0
-  sDisplay: {fileID: 6580374562516774737}
+  sDisplay: {fileID: 3973552537649193660}
   OnShellBreak:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6580374562516774739}
+      - m_Target: {fileID: 3973552537649193662}
         m_TargetAssemblyTypeName: DraggableBehaviour, Assembly-CSharp
         m_MethodName: setDraggability
         m_Mode: 6
@@ -145,19 +146,19 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   hasShell: 1
---- !u!114 &6580374562516774739
+--- !u!114 &3973552537649193662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580374562516774732}
+  m_GameObject: {fileID: 3973552537649193633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d8ecf5cfbf2d4be9b71a349301f8009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 6580374562516774741}
+  body: {fileID: 3973552537649193656}
   onDrag:
     m_PersistentCalls:
       m_Calls: []
@@ -165,13 +166,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   draggable: 0
---- !u!61 &6580374562516774738
+--- !u!61 &3973552537649193663
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580374562516774732}
+  m_GameObject: {fileID: 3973552537649193633}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -191,14 +192,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.54, y: 3.04}
   m_EdgeRadius: 0
---- !u!50 &6580374562516774741
+--- !u!50 &3973552537649193656
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580374562516774732}
+  m_GameObject: {fileID: 3973552537649193633}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -212,13 +213,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-8648018361855426462
+--- !u!114 &7749245975448243599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580374562516774732}
+  m_GameObject: {fileID: 3973552537649193633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 703d0a8a200977f45a6fc3747d113d4a, type: 3}
@@ -228,7 +229,7 @@ MonoBehaviour:
   respondEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6580374562516774740}
+      - m_Target: {fileID: 3973552537649193657}
         m_TargetAssemblyTypeName: BaseGermBehavior, Assembly-CSharp
         m_MethodName: ChangeSpeed
         m_Mode: 6
@@ -240,13 +241,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-4248772115385700956
+--- !u!114 &2990283996348489801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580374562516774732}
+  m_GameObject: {fileID: 3973552537649193633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 703d0a8a200977f45a6fc3747d113d4a, type: 3}
@@ -256,7 +257,7 @@ MonoBehaviour:
   respondEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6580374562516774740}
+      - m_Target: {fileID: 3973552537649193657}
         m_TargetAssemblyTypeName: BaseGermBehavior, Assembly-CSharp
         m_MethodName: ChangeSpeed
         m_Mode: 6
@@ -268,13 +269,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!114 &1507703351512687559
+--- !u!114 &8690464056629194282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580374562516774732}
+  m_GameObject: {fileID: 3973552537649193633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 703d0a8a200977f45a6fc3747d113d4a, type: 3}
@@ -284,7 +285,7 @@ MonoBehaviour:
   respondEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6191343848392109459}
+      - m_Target: {fileID: 4150868993530175614}
         m_TargetAssemblyTypeName: DestroyObject, Assembly-CSharp
         m_MethodName: destroyThisObject
         m_Mode: 1
@@ -296,13 +297,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6191343848392109459
+--- !u!114 &4150868993530175614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6580374562516774732}
+  m_GameObject: {fileID: 3973552537649193633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9073b5a4ccb97945b031123276084b2, type: 3}
@@ -310,3 +311,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayedDeathTime: 0
   startTimerDeath: 0
+--- !u!114 &7815657636294014301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3973552537649193633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d4fa7a63a1e4a94ebf500633d49e420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3973552537649193657}
+        m_TargetAssemblyTypeName: BaseGermBehavior, Assembly-CSharp
+        m_MethodName: createParticles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  disableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  quitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  tapEvent:
+    m_PersistentCalls:
+      m_Calls: []

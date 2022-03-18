@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 public abstract class BaseGermBehavior : MonoBehaviour
 {
-    
+    public ParticleSystem pSys;
     private WaitForSeconds wfs;
     protected Rigidbody2D body;
     protected Vector2 direction, destination;
@@ -50,5 +51,11 @@ public abstract class BaseGermBehavior : MonoBehaviour
         moveFrequency *= increase ? speedMultiplier:(1/speedMultiplier);
         wfs = new WaitForSeconds(1/moveFrequency);
     }
+
+    public void createParticles()
+    {
+        Instantiate(pSys, gameObject.transform.position, quaternion.identity);
+    }
     
+
 }

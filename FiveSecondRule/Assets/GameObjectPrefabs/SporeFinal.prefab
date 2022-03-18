@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4127098547708445205
+--- !u!1 &4894316331629209025
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4127098547708445202}
-  - component: {fileID: 4127098547708445201}
-  - component: {fileID: 4127098547708445200}
-  - component: {fileID: 4127098547708445207}
-  - component: {fileID: 4127098547708445206}
-  - component: {fileID: 101977764406510554}
-  - component: {fileID: 1703951516620209962}
-  - component: {fileID: -4857793182316292649}
-  - component: {fileID: -2518370043976754932}
+  - component: {fileID: 4894316331629209030}
+  - component: {fileID: 4894316331629209029}
+  - component: {fileID: 4894316331629209028}
+  - component: {fileID: 4894316331629209027}
+  - component: {fileID: 4894316331629209026}
+  - component: {fileID: 8917180839535043598}
+  - component: {fileID: 7858740009270319358}
+  - component: {fileID: 5062004545126576643}
+  - component: {fileID: 2857128584283193048}
   m_Layer: 6
-  m_Name: SporePrefab
+  m_Name: SporeFinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4127098547708445202
+--- !u!4 &4894316331629209030
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4127098547708445205}
+  m_GameObject: {fileID: 4894316331629209025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.06, y: 6, z: -5}
+  m_LocalPosition: {x: -3.4957013, y: 2.1074848, z: -5}
   m_LocalScale: {x: 0.2836, y: 0.2836, z: 0.2836}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4127098547708445201
+--- !u!212 &4894316331629209029
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4127098547708445205}
+  m_GameObject: {fileID: 4894316331629209025}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 697fbf5bddbbe3f4cb582da0560acd4e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9694851, g: 1, b: 0.4669811, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -90,13 +90,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &4127098547708445200
+--- !u!58 &4894316331629209028
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4127098547708445205}
+  m_GameObject: {fileID: 4894316331629209025}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -106,14 +106,14 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
---- !u!50 &4127098547708445207
+--- !u!50 &4894316331629209027
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4127098547708445205}
+  m_GameObject: {fileID: 4894316331629209025}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -127,32 +127,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4127098547708445206
+--- !u!114 &4894316331629209026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4127098547708445205}
+  m_GameObject: {fileID: 4894316331629209025}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d964c5d24cc31e4bb942ee74c05ddf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pSys: {fileID: 0}
+  pSys: {fileID: 3063301636590426127, guid: c88467a061538304bb84e1dd014257fd, type: 3}
   target: {fileID: 0}
   moveForce: 0
   moveFrequency: 0
   speedMultiplier: 0
   SpawnPoint: {x: 0, y: 0, z: 0}
   mushroom: {fileID: 5399015485043294407, guid: 7e3d6dd9e6511144f8d4f367f64799a6, type: 3}
---- !u!114 &101977764406510554
+--- !u!114 &8917180839535043598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4127098547708445205}
+  m_GameObject: {fileID: 4894316331629209025}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4fa7a63a1e4a94ebf500633d49e420, type: 3}
@@ -164,7 +164,7 @@ MonoBehaviour:
   collisionEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4127098547708445206}
+      - m_Target: {fileID: 4894316331629209026}
         m_TargetAssemblyTypeName: SporeBehavior, Assembly-CSharp
         m_MethodName: SpawnMushrrom
         m_Mode: 1
@@ -188,9 +188,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1703951516620209962}
+      - m_Target: {fileID: 7858740009270319358}
         m_TargetAssemblyTypeName: DestroyObject, Assembly-CSharp
-        m_MethodName: destroyThisObject
+        m_MethodName: DestroyThisObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -205,7 +205,19 @@ MonoBehaviour:
       m_Calls: []
   destroyEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4894316331629209026}
+        m_TargetAssemblyTypeName: BaseGermBehavior, Assembly-CSharp
+        m_MethodName: createParticles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -215,13 +227,13 @@ MonoBehaviour:
   tapEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1703951516620209962
+--- !u!114 &7858740009270319358
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4127098547708445205}
+  m_GameObject: {fileID: 4894316331629209025}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9073b5a4ccb97945b031123276084b2, type: 3}
@@ -229,19 +241,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayedDeathTime: 0
   startTimerDeath: 0
---- !u!114 &-4857793182316292649
+--- !u!114 &5062004545126576643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4127098547708445205}
+  m_GameObject: {fileID: 4894316331629209025}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d8ecf5cfbf2d4be9b71a349301f8009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body: {fileID: 4127098547708445207}
+  body: {fileID: 4894316331629209027}
   onDrag:
     m_PersistentCalls:
       m_Calls: []
@@ -249,13 +261,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   draggable: 1
---- !u!114 &-2518370043976754932
+--- !u!114 &2857128584283193048
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4127098547708445205}
+  m_GameObject: {fileID: 4894316331629209025}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 703d0a8a200977f45a6fc3747d113d4a, type: 3}
@@ -265,7 +277,7 @@ MonoBehaviour:
   respondEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1703951516620209962}
+      - m_Target: {fileID: 7858740009270319358}
         m_TargetAssemblyTypeName: DestroyObject, Assembly-CSharp
         m_MethodName: destroyThisObject
         m_Mode: 1
