@@ -9,6 +9,7 @@ public class TapHealth : MonoBehaviour
     private int health;
     public int maxHealth;
     public UnityEvent destroyEvent;
+    public ParticleSystem pSys;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class TapHealth : MonoBehaviour
     public void OnMouseDown()
     {
         health -= 1;
+        pSys.Play();
         if (health <= 0)
         {
             destroyEvent?.Invoke();
