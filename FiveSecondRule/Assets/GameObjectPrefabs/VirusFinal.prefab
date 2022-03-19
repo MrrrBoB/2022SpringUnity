@@ -182,7 +182,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9153132917011713656}
         m_TargetAssemblyTypeName: DestroyObject, Assembly-CSharp
-        m_MethodName: destroyThisObject
+        m_MethodName: DestroyThisObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
