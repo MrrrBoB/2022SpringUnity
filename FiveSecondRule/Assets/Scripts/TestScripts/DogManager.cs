@@ -9,29 +9,20 @@ public class DogManager : MonoBehaviour
     public List<GameObject> dogList;
     private WaitForSeconds dogWfs;
     private Coroutine currentDogRoutine;
-    private bool dogIsActive;
-
-    public float activationFrequency;
+    public float activationFrequencyMin;
+    public float activationFrequencyMax;
     // Start is called before the first frame update
     void Start()
     {
-        dogWfs = new WaitForSeconds(activationFrequency);
+        dogWfs = new WaitForSeconds(Random.Range(activationFrequencyMin, activationFrequencyMax));
         initiateDogs();
     }
 
     public IEnumerator DogRoutine()
     {
         yield return dogWfs;
-        while (true)
-        {
-            if (!dogIsActive)
-            {
-                dogList[Random.Range(0, dogList.Count)].gameObject.SetActive(true);
-                dogIsActive = true;
-            }
-            else
-                yield return dogWfs;
-        }
+        dogList[Random.Range(0, dogList.Count)].gameObject.SetActive(true);
+        
     }
 
     public void ResetCoroutine()
@@ -42,12 +33,11 @@ public class DogManager : MonoBehaviour
     }
     public void dogDisabled()
     {
-        dogIsActive = false;
+        initiateDogs();
     }
 
     private void initiateDogs()
     {
-        dogIsActive = false;
         currentDogRoutine = StartCoroutine(DogRoutine());
     }
 }
