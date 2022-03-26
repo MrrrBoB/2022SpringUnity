@@ -2258,15 +2258,15 @@ MonoBehaviour:
   - {x: -13, y: 0.4}
   - {x: 13, y: 0.4}
   listOfObjects: []
-  spawnFrequency: 2
+  spawnFrequency: 1.5
   levelTotalCount: 0
   winEvent:
     m_PersistentCalls:
       m_Calls: []
   remainingText: {fileID: 1832880478}
-  virusCount: 0
+  virusCount: 8
   virusObj: {fileID: 707815304880792342, guid: 95e0ef22e2010e94595f419c504d2d4e, type: 3}
-  bacteriaCount: 10
+  bacteriaCount: 24
   bacteriaObj: {fileID: 3973552537649193633, guid: 3c32edfaedea5ae40a05de26ea709de5, type: 3}
   sporeCount: 0
   SporeObj: {fileID: 4894316331629209025, guid: e8b220d35541c5b4e9817c87bb94832a, type: 3}
@@ -3751,10 +3751,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2759593133514689881, guid: 3460573c88d7f6e43b7800ff384053d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2759593133514689881, guid: 3460573c88d7f6e43b7800ff384053d0, type: 3}
       propertyPath: activationFrequencyMax
       value: 6
       objectReference: {fileID: 0}
@@ -3768,7 +3764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2759593133514689884, guid: 3460573c88d7f6e43b7800ff384053d0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3460573c88d7f6e43b7800ff384053d0, type: 3}
