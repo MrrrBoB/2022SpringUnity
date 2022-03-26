@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelKeyManager : MonoBehaviour
+[CreateAssetMenu]
+public class LevelKeyManager : ScriptableObject
 {
+    public bool[] levelKeys;
     // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
         
     }
