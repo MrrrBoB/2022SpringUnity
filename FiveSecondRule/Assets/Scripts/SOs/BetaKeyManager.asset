@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee90bba622835444b9ca26bffce56e9, type: 3}
   m_Name: BetaKeyManager
   m_EditorClassIdentifier: 
-  levelKeys: 
+  levelKeys: 010000000000000000000000000000

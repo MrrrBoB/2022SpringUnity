@@ -7,14 +7,14 @@ public class LevelKeyManager : ScriptableObject
 {
     public bool[] levelKeys;
     // Start is called before the first frame update
-    public void Awake()
+    public void gainKeyToLevel(int levelKeyIndex)
     {
-        
+        levelKeys[levelKeyIndex] = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool getKeyStatus(int keyIndex)
     {
-        
+        return levelKeys[keyIndex];
     }
+    
 }

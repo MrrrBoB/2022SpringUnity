@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 838533070}
   - component: {fileID: 838533069}
   m_Layer: 5
-  m_Name: Level5EnterButton (4)
+  m_Name: Level5EnterButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -824,6 +824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d22a974f0621e34c9b749d7deefe36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredKeyIndex: 4
+  keyM: {fileID: 11400000, guid: 6c05e8eaf4f9dd7408725cb532a06c07, type: 2}
 --- !u!114 &838533070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,7 +872,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 838533069}
         m_TargetAssemblyTypeName: SceneManaging, Assembly-CSharp
-        m_MethodName: loadScn
+        m_MethodName: LoadLockedScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1095,7 +1097,7 @@ GameObject:
   - component: {fileID: 950670247}
   - component: {fileID: 950670246}
   m_Layer: 5
-  m_Name: Level3EnterButton (2)
+  m_Name: Level3EnterButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1133,6 +1135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d22a974f0621e34c9b749d7deefe36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredKeyIndex: 2
+  keyM: {fileID: 11400000, guid: 6c05e8eaf4f9dd7408725cb532a06c07, type: 2}
 --- !u!114 &950670247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,7 +1183,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 950670246}
         m_TargetAssemblyTypeName: SceneManaging, Assembly-CSharp
-        m_MethodName: loadScn
+        m_MethodName: LoadLockedScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1279,6 +1283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d22a974f0621e34c9b749d7deefe36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredKeyIndex: 0
+  keyM: {fileID: 0}
 --- !u!114 &1004090814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,6 +1800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d22a974f0621e34c9b749d7deefe36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredKeyIndex: 0
+  keyM: {fileID: 0}
 --- !u!114 &1181250470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1940,6 +1948,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d22a974f0621e34c9b749d7deefe36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredKeyIndex: 0
+  keyM: {fileID: 0}
 --- !u!114 &1370133879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2129,7 +2139,7 @@ GameObject:
   - component: {fileID: 1493683163}
   - component: {fileID: 1493683162}
   m_Layer: 5
-  m_Name: Level2EnterButton (1)
+  m_Name: Level2EnterButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2167,6 +2177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d22a974f0621e34c9b749d7deefe36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredKeyIndex: 1
+  keyM: {fileID: 11400000, guid: 6c05e8eaf4f9dd7408725cb532a06c07, type: 2}
 --- !u!114 &1493683163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2213,7 +2225,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1493683162}
         m_TargetAssemblyTypeName: SceneManaging, Assembly-CSharp
-        m_MethodName: loadScn
+        m_MethodName: LoadLockedScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2313,6 +2325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d22a974f0621e34c9b749d7deefe36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredKeyIndex: 0
+  keyM: {fileID: 0}
 --- !u!114 &1519137190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,7 +2435,7 @@ GameObject:
   - component: {fileID: 1650361708}
   - component: {fileID: 1650361707}
   m_Layer: 5
-  m_Name: Level4EnterButton (3)
+  m_Name: Level4EnterButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2459,6 +2473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d22a974f0621e34c9b749d7deefe36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredKeyIndex: 3
+  keyM: {fileID: 11400000, guid: 6c05e8eaf4f9dd7408725cb532a06c07, type: 2}
 --- !u!114 &1650361708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2505,7 +2521,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1650361707}
         m_TargetAssemblyTypeName: SceneManaging, Assembly-CSharp
-        m_MethodName: loadScn
+        m_MethodName: LoadLockedScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3067,6 +3083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d22a974f0621e34c9b749d7deefe36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiredKeyIndex: 0
+  keyM: {fileID: 0}
 --- !u!114 &2101902971
 MonoBehaviour:
   m_ObjectHideFlags: 0
