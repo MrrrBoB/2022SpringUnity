@@ -26,4 +26,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KitchenL5.unity
     guid: c40458645a4b2eb4bbd17acd3eaea340
+  - enabled: 1
+    path: Assets/Scenes/Bedroom L1.unity
+    guid: 9c1efd1c5291bd64982eac2f566711b2
+  - enabled: 1
+    path: Assets/Scenes/BedroomL2.unity
+    guid: aa24caf4a14140444beaeabff804aa7f
+  - enabled: 1
+    path: Assets/Scenes/BedroomL3.unity
+    guid: d5489b4b6c7509e47b1e81f7927098aa
+  - enabled: 1
+    path: Assets/Scenes/BedroomL4.unity
+    guid: 54020d6a15ac2e74ca4c7d9cb98aac76
+  - enabled: 1
+    path: Assets/Scenes/BedroomL5.unity
+    guid: dd91b0e973f11d14fa6170dc72eeb6fd
   m_configObjects: {}
