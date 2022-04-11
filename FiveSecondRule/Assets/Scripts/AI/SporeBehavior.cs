@@ -16,6 +16,7 @@ public class SporeBehavior : BaseGermBehavior
         SpawnPoint = new Vector3(Random.Range(-9, 9), 6);
         if (SpawnPoint.x >= -3 && SpawnPoint.x < 3) SpawnPoint.x = 3; 
         transform.position=SpawnPoint;
+        Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer, true);
     }
 
     public void SpawnMushrrom()

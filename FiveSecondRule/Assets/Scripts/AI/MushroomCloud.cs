@@ -7,7 +7,7 @@ public class MushroomCloud : MonoBehaviour
 {
   public Collider2D col;
   public SpriteRenderer cloud;
-  private float activeMushrooms = 0;
+  public float activeMushrooms = 0;
 
   public void ChangeActiveCount(float num)
   {
