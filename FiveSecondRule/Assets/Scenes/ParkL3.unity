@@ -1478,7 +1478,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 13
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2281,17 +2281,17 @@ MonoBehaviour:
   - {x: -13, y: 0.4}
   - {x: 13, y: 0.4}
   listOfObjects: []
-  spawnFrequency: 2
+  spawnFrequency: 1.7
   levelTotalCount: 0
   winEvent:
     m_PersistentCalls:
       m_Calls: []
   remainingText: {fileID: 1832880478}
-  virusCount: 4
+  virusCount: 8
   virusObj: {fileID: 707815304880792342, guid: 95e0ef22e2010e94595f419c504d2d4e, type: 3}
-  bacteriaCount: 12
+  bacteriaCount: 20
   bacteriaObj: {fileID: 3973552537649193633, guid: 3c32edfaedea5ae40a05de26ea709de5, type: 3}
-  sporeCount: 4
+  sporeCount: 10
   SporeObj: {fileID: 4894316331629209025, guid: e8b220d35541c5b4e9817c87bb94832a, type: 3}
 --- !u!4 &1188822503
 Transform:
@@ -3348,11 +3348,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2759593133514689881, guid: 3460573c88d7f6e43b7800ff384053d0, type: 3}
       propertyPath: activationFrequencyMax
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2759593133514689881, guid: 3460573c88d7f6e43b7800ff384053d0, type: 3}
       propertyPath: activationFrequencyMin
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2759593133514689884, guid: 3460573c88d7f6e43b7800ff384053d0, type: 3}
       propertyPath: m_Name

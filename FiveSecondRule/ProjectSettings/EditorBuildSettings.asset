@@ -41,4 +41,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BedroomL5.unity
     guid: dd91b0e973f11d14fa6170dc72eeb6fd
+  - enabled: 1
+    path: Assets/Scenes/ParkL1.unity
+    guid: 54a6beb547917f04ba84df58488fcc36
+  - enabled: 1
+    path: Assets/Scenes/ParkL2.unity
+    guid: 216a45e28dc7f174a8e9894b48d958e8
+  - enabled: 1
+    path: Assets/Scenes/ParkL3.unity
+    guid: 65a5d8832d850314aaca879b2d307587
+  - enabled: 1
+    path: Assets/Scenes/ParkL4.unity
+    guid: 25e29e3d20c3ccf4196a4bf1358a08e1
+  - enabled: 1
+    path: Assets/Scenes/ParkL5.unity
+    guid: f283628fd8ad8824fad647a79b8a8a48
   m_configObjects: {}
