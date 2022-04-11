@@ -24,7 +24,6 @@ public class TapHealth : MonoBehaviour
         Instantiate(pSys, gameObject.transform.position, quaternion.identity);
         if (health <= 0)
         {
-            destroyEvent?.Invoke();
             Destroy(gameObject);
         }
     }
