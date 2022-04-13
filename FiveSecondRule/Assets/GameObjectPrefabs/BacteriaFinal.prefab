@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8690464056629194282}
   - component: {fileID: 4150868993530175614}
   - component: {fileID: 7815657636294014301}
+  - component: {fileID: 9036668396562082797}
   m_Layer: 6
   m_Name: BacteriaFinal
   m_TagString: Untagged
@@ -110,6 +111,11 @@ MonoBehaviour:
   moveForce: 250
   moveFrequency: 1
   speedMultiplier: 1.4
+  Plyr: {fileID: 9036668396562082797}
+  soundList:
+  - {fileID: 8300000, guid: 0dbbe40b35e0e964cac51d035a7c5601, type: 3}
+  - {fileID: 8300000, guid: 207cbb773cb38964e96bc6519f35a273, type: 3}
+  - {fileID: 8300000, guid: 09292a23106526b44b5f09c26f144c2c, type: 3}
 --- !u!114 &3973552537649193635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +152,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   hasShell: 1
+  crunch: {fileID: 8300000, guid: 8ca7147beabb62f45ac985898be1369b, type: 3}
 --- !u!114 &3973552537649193662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +354,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3973552537649193657}
+        m_TargetAssemblyTypeName: BaseGermBehavior, Assembly-CSharp
+        m_MethodName: playRandomSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   disableEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -356,3 +375,99 @@ MonoBehaviour:
   tapEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!82 &9036668396562082797
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3973552537649193633}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0dbbe40b35e0e964cac51d035a7c5601, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

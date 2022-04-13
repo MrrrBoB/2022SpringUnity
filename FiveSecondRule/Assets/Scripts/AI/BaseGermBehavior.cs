@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 public abstract class BaseGermBehavior : MonoBehaviour
@@ -16,6 +18,8 @@ public abstract class BaseGermBehavior : MonoBehaviour
     public float moveForce;
     public float moveFrequency;
     public float speedMultiplier;
+    public AudioSource Plyr;
+    public AudioClip[] soundList;
     //public Collider2D bodyCol;
     protected virtual void Start()
     {
@@ -55,6 +59,11 @@ public abstract class BaseGermBehavior : MonoBehaviour
     public void createParticles()
     {
         Instantiate(pSys, gameObject.transform.position, quaternion.identity);
+    }
+
+    public void playRandomSound()
+    {
+        AudioSource.PlayClipAtPoint(soundList[Random.Range(0, soundList.Length - 1)], gameObject.transform.position);
     }
     
 

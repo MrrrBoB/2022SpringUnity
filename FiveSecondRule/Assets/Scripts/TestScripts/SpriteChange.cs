@@ -13,6 +13,7 @@ public class SpriteChange : MonoBehaviour
     public SpriteRenderer sDisplay;
     public UnityEvent OnShellBreak;
     public bool hasShell = true;
+    public AudioClip crunch;
     void Start()
     {
         ArraySize = SpriteStages.Length;
@@ -47,5 +48,6 @@ public class SpriteChange : MonoBehaviour
      private void CrackShell()
      {
          currentShellHitPoints -= 1;
+         AudioSource.PlayClipAtPoint(crunch, gameObject.transform.position);
      }
 }
