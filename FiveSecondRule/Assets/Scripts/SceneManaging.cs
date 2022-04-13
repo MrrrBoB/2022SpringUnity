@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class SceneManaging : MonoBehaviour
@@ -8,6 +9,7 @@ public class SceneManaging : MonoBehaviour
 
     public int requiredKeyIndex;
     public LevelKeyManager keyM;
+    public UnityEvent lockMessage;
     public void loadScn(int scnfour)
     {
         SceneManager.LoadScene(scnfour);
@@ -19,7 +21,7 @@ public class SceneManaging : MonoBehaviour
         {
             loadScn(sceneToLoad);
         }
-        else Debug.Log("Need Key");
+        else lockMessage.Invoke();
     }
 
     public void QuitGame()
