@@ -164,6 +164,11 @@ MonoBehaviour:
   moveForce: 20
   moveFrequency: 0.5
   speedMultiplier: 0
+  Plyr: {fileID: 0}
+  soundList:
+  - {fileID: 8300000, guid: 0dbbe40b35e0e964cac51d035a7c5601, type: 3}
+  - {fileID: 8300000, guid: 207cbb773cb38964e96bc6519f35a273, type: 3}
+  - {fileID: 8300000, guid: 09292a23106526b44b5f09c26f144c2c, type: 3}
 --- !u!114 &1634125594380708281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +236,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8404844558658420684}
         m_TargetAssemblyTypeName: BaseGermBehavior, Assembly-CSharp
         m_MethodName: createParticles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8404844558658420684}
+        m_TargetAssemblyTypeName: BaseGermBehavior, Assembly-CSharp
+        m_MethodName: playRandomSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

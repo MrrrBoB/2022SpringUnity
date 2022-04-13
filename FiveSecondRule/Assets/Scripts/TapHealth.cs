@@ -11,6 +11,7 @@ public class TapHealth : MonoBehaviour
     public int maxHealth;
     public UnityEvent destroyEvent;
     public ParticleSystem pSys;
+    public AudioClip crunchSound;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class TapHealth : MonoBehaviour
     {
         health -= 1;
         Instantiate(pSys, gameObject.transform.position, quaternion.identity);
+        AudioSource.PlayClipAtPoint(crunchSound, gameObject.transform.position);
         if (health <= 0)
         {
             Destroy(gameObject);

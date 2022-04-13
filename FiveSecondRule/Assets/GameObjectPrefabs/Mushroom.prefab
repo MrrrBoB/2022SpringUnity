@@ -254,3 +254,4 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   pSys: {fileID: 3063301636590426127, guid: a10da0c45af11374aa8c49e60ea6306f, type: 3}
+  crunchSound: {fileID: 8300000, guid: 8ca7147beabb62f45ac985898be1369b, type: 3}
