@@ -6,11 +6,12 @@ public class KeyManagerLevelStar : MonoBehaviour
 {
     public LevelKeyManager mgr;
 
-    public int LevelKeyIndex;
+    public int LevelKeyIndexToCheck;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.SetActive(!mgr.getKeyStatus(LevelKeyIndexToCheck));
     }
+    
 
 }
