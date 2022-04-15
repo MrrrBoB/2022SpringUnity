@@ -116,6 +116,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0dbbe40b35e0e964cac51d035a7c5601, type: 3}
   - {fileID: 8300000, guid: 207cbb773cb38964e96bc6519f35a273, type: 3}
   - {fileID: 8300000, guid: 09292a23106526b44b5f09c26f144c2c, type: 3}
+  squish: {fileID: 8300000, guid: 908d5211b15f6d94b91a478c2c33eb99, type: 3}
 --- !u!114 &3973552537649193635
 MonoBehaviour:
   m_ObjectHideFlags: 0
