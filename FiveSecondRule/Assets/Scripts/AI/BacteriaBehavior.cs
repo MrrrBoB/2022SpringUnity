@@ -7,11 +7,6 @@ namespace TestScripts
     {
         public AudioClip squish;
         
-        protected override void Start()
-        {
-            base.Start();
-        }
-   
 
         public override void Evolve()
         {
