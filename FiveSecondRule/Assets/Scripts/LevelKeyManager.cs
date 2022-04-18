@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,12 +9,21 @@ public class LevelKeyManager : ScriptableObject
 {
     public bool[] levelKeys;
 
-    public UnityEvent SaveEvent;
+    public bool hasReset;
     // Start is called before the first frame update
+    public void FirstTimeResetCheck()
+    {
+        if (!hasReset)
+        {
+            ResetProgress();
+            hasReset = true;
+            Debug.Log("reset levels");
+        }
+    }
+
     public void gainKeyToLevel(int levelKeyIndex)
     {
         levelKeys[levelKeyIndex] = true;
-        SaveEvent.Invoke();
     }
 
     public bool getKeyStatus(int keyIndex)
@@ -27,7 +37,6 @@ public class LevelKeyManager : ScriptableObject
         {
             levelKeys[i] = false;
         }
-        SaveEvent.Invoke();
     }
     
     

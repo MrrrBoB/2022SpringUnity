@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aee90bba622835444b9ca26bffce56e9, type: 3}
-  m_Name: BetaKeyManager
+  m_Script: {fileID: 11500000, guid: 9c8400d5f56216644bf561d55d54c17b, type: 3}
+  m_Name: RefreshUI
   m_EditorClassIdentifier: 
-  levelKeys: 010000000000000000000000000000
-  hasReset: 0
